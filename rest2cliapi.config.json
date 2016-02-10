@@ -1,0 +1,17 @@
+{
+  "lsla":
+    {
+      "command": "ls",
+      "arguments": ["-la"]
+    },
+    "ls":
+      {
+        "command": "ls",
+        "arguments": []
+      },
+    "cat":
+      {
+        "command": "cat",
+        "arguments": []
+      }
+}
