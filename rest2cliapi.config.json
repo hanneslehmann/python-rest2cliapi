@@ -2,21 +2,29 @@
   "lsla":
     {
       "command": "ls",
-      "arguments": ["-la"]
+      "arguments": ["-la"],
+      "overwrite_arguments": false,
+      "user": ["user1"]
     },
     "ls":
       {
         "command": "ls",
-        "arguments": []
+        "arguments": [],
+        "overwrite_arguments": true,
+        "user": ["user1", "user2"]
       },
     "cat":
       {
         "command": "cat",
-        "arguments": []
+        "arguments": [],
+        "overwrite_arguments": true,
+        "user": ["user1"]
       },
       "echo":
       {
         "command": "echo",
-        "arguments": ["PONG!"]
-      },
+        "arguments": ["PONG!"],
+        "overwrite_arguments": true,
+        "user": ["user1", "user2"]
+      }
 }
