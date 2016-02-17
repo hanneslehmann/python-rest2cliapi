@@ -19,8 +19,8 @@ def index(command):
         response.content_type = 'application/json'
         cmd = configuration[command]["command"]
         # check if user is allowed for this action
-        for key in request.headers:
-            print key, 'corresponds to', request.headers[key]
+        # for key in request.headers:
+        #     print key, 'corresponds to', request.headers[key]
         if request.headers.get('user') in configuration[command]["user"]:
             if configuration[command]["overwrite_arguments"]:
                 try:
