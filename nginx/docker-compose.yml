@@ -1,0 +1,9 @@
+# sudo mount -t vboxsf -o defaults,uid=`id -u docker`,gid=`id -g docker` hosthome /homes
+my-test:
+  image: nginx
+  volumes:
+   - ./data:/usr/share/nginx/html
+   - ./auth:/etc/nginx/conf.d
+   - ./auth/nginx.conf:/etc/nginx/nginx.conf:ro
+  ports:
+   - 80:80

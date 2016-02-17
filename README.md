@@ -12,6 +12,16 @@ You should not configure 0.0.0.0 as host listening IP.
 
 Example calls
 ```bash
-curl -X POST -H "user: user1" -H "Content-Type: application/json" -d "{\"arguments\":[\"ping from host\"]}" http://localhost:8180/echo
-curl -X POST -H "user: user1" -H "Content-Type: application/json" -d "{\"arguments\":[\"-la\"]}" http://localhost:8180/ls
+curl -X POST -H "user: testuser" -H "Content-Type: application/json" -d "{\"arguments\":[\"ping from host\"]}" http://localhost:8180/echo
+curl -X POST -H "user: testuser" -H "Content-Type: application/json" -d "{\"arguments\":[\"-la\"]}" http://localhost:8180/ls
+```
+
+Create a password file (or use the one within this repo)
+```bash
+docker run --rm --entrypoint htpasswd registry:2 -bn testuser testpassword > auth/nginx.htpasswd
+```
+
+Example with nginx in front (change 192.168.99.100 to whatever IP you have):
+```bash
+curl -X POST -H "Content-Type: application/json" --user testuser:testpassword -d "{\"arguments\":[\"ping from host\"]}" http://192.168.99.100/rest2cli/echo
 ```

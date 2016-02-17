@@ -4,7 +4,7 @@
       "command": "ls",
       "arguments": ["-la"],
       "overwrite_arguments": false,
-      "user": ["user1"]
+      "user": ["testuser"]
     },
     "ls":
       {
@@ -25,6 +25,6 @@
         "command": "echo",
         "arguments": ["PONG!"],
         "overwrite_arguments": true,
-        "user": ["user1", "user2"]
+        "user": ["testuser", "user2"]
       }
 }
