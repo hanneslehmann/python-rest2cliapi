@@ -12,6 +12,6 @@ You should not configure 0.0.0.0 as host listening IP.
 
 Example calls
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"arguments\":[\"ping from host\"]}" http://localhost:8180/echo
-curl -X POST -H "Content-Type: application/json" -d "{\"arguments\":[\"-la\"]}" http://localhost:8180/ls
+curl -X POST -H "user: user1" -H "Content-Type: application/json" -d "{\"arguments\":[\"ping from host\"]}" http://localhost:8180/echo
+curl -X POST -H "user: user1" -H "Content-Type: application/json" -d "{\"arguments\":[\"-la\"]}" http://localhost:8180/ls
 ```
